@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config/>
+
+	<!-- 1. Here used XML Technique to configure and handle lifecycle of bean. -->
+	<bean class="com.learn.springcore.lifecycle.Samosa" name="sam1"
+		init-method="init" destroy-method="destroy">
+		<property name="price"  value="10"/>
+	</bean>
+	
+	<!-- 2. Here used Spring Interface Technique to configure and handle lifecycle of bean. -->
+	<bean class="com.learn.springcore.lifecycle.Pepsi" name="coke1">
+		<property name="price" value="40"/>
+	</bean>
+	
+	<!-- 3. Here used Annotations Technique to configure and handle lifecycle of bean. -->
+	<bean class="com.learn.springcore.lifecycle.Maggi" name="maggiFlavor1">
+		<property name="flavour" value="Sada Masala"/>
+	</bean>
+	
+</beans>

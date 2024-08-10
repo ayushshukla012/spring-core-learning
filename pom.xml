@@ -38,5 +38,14 @@
 				3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!--This below dependency is added to use the Annotation technique to handle bean lifecycle.
+			It is required if you are using Java 8 above
+		-->
+		<dependency>
+		    <groupId>javax.annotation</groupId>
+		    <artifactId>javax.annotation-api</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
 	</dependencies>
 </project>
