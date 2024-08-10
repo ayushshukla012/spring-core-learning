@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class="com.learn.springcore.constructorinjection.Certificate" name="certficate1">
+		<constructor-arg value="ANdroid using Kotlin"/>
+	</bean>
+
+	<bean class="com.learn.springcore.constructorinjection.Person" name="constInject1">
+		<constructor-arg value="Ayush" type="String"/>
+		<constructor-arg value="12" type="int"/>
+		<constructor-arg ref="certficate1"/>
+		<constructor-arg>
+			<list>
+				<value>My List : 1</value>
+				<value> My List : 2</value>
+				<value> My List : 3</value>
+				<value> My List : 4</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- Checking the concept of Ambiguity problem and its solution with COnstructor Injection -->
+	<!-- We can use "index" attribute to handle when which value to be inserted -->
+	<bean class="com.learn.springcore.constructorinjection.Addition" name="add1">
+		<constructor-arg value="1" type="int" index="1"/>
+		<constructor-arg value="2" type="int" index="0"/>
+	</bean>
+	
+</beans>

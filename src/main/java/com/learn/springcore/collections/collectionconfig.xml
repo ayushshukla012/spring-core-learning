@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.learn.springcore.collections.Employee" name="employee1">
+		<property name="employeeName" value="Radhe"/>
+		
+		<property name="employeePhones">
+			<list>
+				<value>765432</value>
+				<value>2345</value>
+				<value>9876543</value>
+				<!-- Inserting a null value -->
+				<null/>
+			</list>
+		</property>
+		
+		<property name="employeeAddress">
+			<set>
+				<value>Delhi</value>
+				<value>Mumbai</value>
+				<value>Chandigarh</value>
+			</set>
+		</property>
+		
+		<property name="employeeCourses">
+			<map>
+				<entry key="Java" value="2month"/>
+				<entry key="Python" value="1month"/>
+				<entry key="C++" value="3month"/>
+				<entry key="Cheetah" value="4.4month"/>
+			</map>
+		</property>
+		
+		<property name="databaseProperties">
+			<props>
+				<prop key="databaseName">myDatabaseSchema</prop>
+				<prop key="databaseTables">14</prop>
+				<prop key="databaseLocation">D:/Learning</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
